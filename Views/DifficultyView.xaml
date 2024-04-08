@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:cadflash.ViewModels"
+             x:DataType="vm:DifficultyViewModel"
+             x:Class="cadflash.Views.DifficultyView"
+             Title="Difficulty Selection"
+             BackgroundColor="#B1C0C9">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="66"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <!--Header-->
+        <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" BackgroundColor="#7989A3" BorderColor="#7989A3" CornerRadius="1"/>
+
+        <!--Decks Layout-->
+        <Frame Grid.Row="2" Grid.Column="0" BackgroundColor="#7989A3" Grid.ColumnSpan="6" BorderColor="#7989A3" CornerRadius="1">
+            <ScrollView Orientation="Horizontal">
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                    <Button x:Name="basicsButton"
+                            Text="C# Basics"
+                            FontSize="25"
+                            BackgroundColor="#B1C0C9"
+                            CornerRadius="1"
+                            WidthRequest="300"
+                            BorderColor="#C1A574"
+                            BorderWidth="2"
+                            FontFamily="OCRA"
+                            Command="{Binding StudyEasyCommand}">
+                    </Button>
+                    <Button x:Name="intermediateButton"
+                            Text="C# Intermediate"
+                            FontSize="25"
+                            BackgroundColor="#B1C0C9"
+                            CornerRadius="1"
+                            WidthRequest="300"
+                            BorderColor="#C1A574"
+                            BorderWidth="2"
+                            FontFamily="OCRA"
+                            Command="{Binding StudyIntermediateCommand}">
+                    </Button>
+                    <Button x:Name="advancedButton"
+                            Text="C# Advanced"
+                            FontSize="25"
+                            BackgroundColor="#B1C0C9"
+                            CornerRadius="1"
+                            WidthRequest="300"
+                            BorderColor="#C1A574"
+                            BorderWidth="2"
+                            FontFamily="OCRA"
+                            Command="{Binding StudyAdvancedCommand}">
+                    </Button>
+                </HorizontalStackLayout>
+            </ScrollView>
+
+        </Frame>
+
+        <!-- Splash Image-->
+        <Frame Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="1" BackgroundColor="#B1C0C9" VerticalOptions="End" BorderColor="#B1C0C9">
+            <Image x:Name="SplashImage"
+               Source="cadflash_small.png"
+               Aspect="AspectFit"
+               HeightRequest="100"
+               HorizontalOptions="Start"/>
+        </Frame>
+
+        <!--Modify Button-->
+        <Frame Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="4" BackgroundColor="#B1C0C9" BorderColor="#B1C0C9">
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button x:Name="ModifyButton"
+                        Text="modify"
+                        FontFamily="OCRA"
+                        FontSize="20"
+                        TextColor="Black"
+                        BackgroundColor="#7989A3"
+                        CornerRadius="1"
+                        Command="{Binding ModifyCommand}"/>
+
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" BackgroundColor="#7989A3" BorderColor="#7989A3" CornerRadius="1"/>
+        
+    </Grid>
+</ContentPage>

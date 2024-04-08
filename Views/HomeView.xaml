@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:cadflash.ViewModels"
+             x:DataType="vm:HomeViewModel"
+             x:Class="cadflash.Views.HomeView"
+             Title="Home"
+             BackgroundColor="#7989A3">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="700"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        
+        <Image  Source="cadflash.png"
+                HeightRequest="500"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Row="0"
+                Grid.Column="1"/>
+
+        <Button x:Name="continueButton" 
+                Text="continue" 
+                FontSize="Large" 
+                Command="{Binding ContinueCommand}" 
+                FontFamily="OCRA"
+                BorderColor="#C1A574" 
+                BorderWidth="3" 
+                BackgroundColor="#7989A3"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Row="1"
+                Grid.Column="1"
+                CornerRadius="1"/>
+
+        <Label Text="@brett-simonds"
+               FontSize="11"
+               TextColor="#B1C0C9"
+               HorizontalOptions="Center"
+               VerticalOptions="End"
+               Grid.Row="2"
+               Grid.Column="1"
+               FontFamily="OCRA"/>
+
+        <Label Text="/2024/"
+               FontSize="10"
+               TextColor="#B1C0C9"
+               HorizontalOptions="Center"
+               VerticalOptions="End"
+               Grid.Row="3"
+               Grid.Column="1"
+               FontFamily="OCRA"/>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:cadflash.ViewModels"
+             x:DataType="vm:StudyAdvancedViewModel"
+             x:Class="cadflash.Views.StudyAdvancedView"
+             Title="Study (Advanced)"
+             BackgroundColor="#7989A3">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="400"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!--Splash Image-->
+        <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="#7989A3" BorderColor="#7989A3" HorizontalOptions="Center">
+            <HorizontalStackLayout>
+                <Image Source="cadflash.png" Aspect="AspectFill"/>
+            </HorizontalStackLayout>
+        </Frame>
+        <!--Flashcard Frame-->
+        <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="#7989A3" BorderColor="#7989A3" CornerRadius="1" HorizontalOptions="Center">
+            <ScrollView Orientation="Horizontal">
+                <Frame BackgroundColor="#B1C0C9" CornerRadius="1" WidthRequest="700" HeightRequest="350" BorderColor="#B1C0C9">
+                    <Label x:Name="flashcardLabel"
+                   Text="Text"
+                   FontFamily="OCRA"
+                   FontSize="25"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   />
+
+                </Frame>
+            </ScrollView>
+        </Frame>
+        <!--Navigation Buttons-->
+        <Frame Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" BorderColor="#7989A3" BackgroundColor="#7989A3">
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                <Button x:Name="revealButton"
+        Text="turn"
+        FontFamily="OCRA"
+        FontSize="20"
+        TextColor="Black"
+        BackgroundColor="#B1C0C9"
+        CornerRadius="1"
+        WidthRequest="100"
+        Clicked="revealButton_Clicked"
+        BorderColor="#C1A574"
+        BorderWidth="3"/>
+                <Button x:Name="nextButton"
+        Text="next"
+        FontFamily="OCRA"
+        FontSize="20"
+        TextColor="Black"
+        BackgroundColor="#B1C0C9"
+        CornerRadius="1"
+        WidthRequest="100"
+        Clicked="nextButton_Clicked"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <!--Backbutton Layout-->
+        <Frame Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="#7989A3" BorderColor="#7989A3" CornerRadius="1">
+            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="End">
+                <Button x:Name="backButton"
+            Text="back"
+            FontFamily="OCRA"
+            FontSize="20"
+            TextColor="Black"
+            BackgroundColor="#B1C0C9"
+            CornerRadius="1"
+            WidthRequest="100"
+            Command="{Binding BackCommand}"
+            Clicked="backButton_Clicked"/>
+            </VerticalStackLayout>
+        </Frame>
+
+    </Grid>
+</ContentPage>
