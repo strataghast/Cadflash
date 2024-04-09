@@ -32,11 +32,15 @@ namespace cadflash.ViewModels
             set => SetProperty(ref _highestStreak, value);
         }
 
+        HighScoreDbContext? highScoreDbContext;
+
         public CRUDViewModel()
         {
             Flashcard = new Flashcard();
             Flashcards = [];
             this.localDbService = new LocalDbService();
+            highScoreDbContext = new HighScoreDbContext();
+            highScoreDbContext.Database.EnsureCreated();
             LoadHighestStreak();
         }
 
