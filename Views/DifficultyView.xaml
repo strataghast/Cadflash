@@ -66,9 +66,27 @@
                     </Button>
                 </HorizontalStackLayout>
             </ScrollView>
-
         </Frame>
-
+        
+        <!--Current Streak-->
+        <Frame Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="6" BackgroundColor="#B1C0C9" BorderColor="#B1C0C9" CornerRadius="1">
+            <VerticalStackLayout HorizontalOptions="Center" Spacing="10">
+                
+                <Label Text="current streak"
+                       FontFamily="OCRA"
+                       FontSize="15"
+                       TextColor="Black"
+                       />
+                <Frame BackgroundColor="#7989A3" BorderColor="#B1C0C9" HorizontalOptions="Center">
+                    <Label x:Name="CurrentStreakLabel"
+                           Text="{Binding CurrentStreak}"
+                           FontFamily="OCRA"
+                           FontSize="20"
+                           TextColor="#C1A574"/>
+                </Frame>
+                
+            </VerticalStackLayout>
+        </Frame>
         <!-- Splash Image-->
         <Frame Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="1" BackgroundColor="#B1C0C9" VerticalOptions="End" BorderColor="#B1C0C9">
             <Image x:Name="SplashImage"

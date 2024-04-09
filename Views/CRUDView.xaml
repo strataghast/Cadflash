@@ -24,7 +24,7 @@
             <ColumnDefinition Width="75"/>
             <ColumnDefinition Width="300"/>
             <ColumnDefinition Width="400"/>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="700"/>
             <ColumnDefinition Width="75"/>
         </Grid.ColumnDefinitions>
@@ -170,6 +170,40 @@
 
         </Frame>
 
+        <!--Current Highest Streak-->
+        <Frame Grid.Row="1" Grid.Column="4" Grid.RowSpan="4" Grid.ColumnSpan="3" BackgroundColor="#B1C0C9" BorderColor="#B1C0C9" HorizontalOptions="End" WidthRequest="400">
+            <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="//highscore" 
+                       FontFamily="OCRA"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center"/>
+                <Label Text="{Binding HighestStreak}" 
+                       FontFamily="OCRA"
+                       FontSize="150"
+                       TextColor="#C1A574"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Frame>
+
+        <!--Current Streak-->
+        <Frame Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" BackgroundColor="#7989A3" BorderColor="#B1C0C9" HorizontalOptions="End" WidthRequest="300" HeightRequest="150">
+            <VerticalStackLayout Spacing="30" HorizontalOptions="Center">
+                <Label Text="//current streak" 
+               FontFamily="OCRA"
+               FontSize="15"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="Center"/>
+                <Label Text="{Binding CurrentStreak}" 
+               FontFamily="OCRA"
+               FontSize="40"
+               TextColor="#C1A574"
+               HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Frame>
     </Grid>
 
 </ContentPage>
