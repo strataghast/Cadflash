@@ -11,7 +11,7 @@ The application breaks the difficulty levels into three separate categories (Bas
 
 The CRUD view also displays your current score streak while the application is in use, as well as the current high score streak.
 
-![CRUD Menu](https://github.com/strataghast/cadflash/assets/122714358/c91c10ad-eeb4-43f8-911f-2bf2e862693f)
+![CRUD Menu](https://github.com/strataghast/cadflash/assets/122714358/2d57ff06-3d0e-4809-8e72-fce72ce09b4c)
 
 For studying flashcards, I incorporated a simple layout that includes a 'turn' button, which utilizes a function to call a random flashcard filtered to a specific diffulty level from the SQLite database. You can turn the flashcard between the question and the answer as you choose, and move to the next random flashcard. You can also utilize the '✓' button to increment how many flashcards you get right, while the '✕' button stops the current score streak, compares to the current high score database, and replaces it if higher.
 
